@@ -20,4 +20,6 @@ Although I've already worked on ML projects and explored research, I want to app
 I've created this repository to structure my learning, document my progress, and hold myself accountable along the way.
 The goal is simple: **learn systematically, build consistently, and become a better researcher.**
 
-## Day 1
+## Log
+
+**Day 1** - Watched first two lectures of CS229; Implemented Linear Regression with Batch and Stochastic Gradient Descent.
