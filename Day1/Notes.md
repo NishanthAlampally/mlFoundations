@@ -20,7 +20,7 @@ Some fundamental terminology:
 - **Target \(y\):** The actual output value we want the model to predict.
 - **Hypothesis \(h_\theta(x)\):** The model's prediction for a given input.
 - **Training examples:** The observed input-output pairs used to train the model.
-- **Parameters \(\theta\):** The weights and biases that the model learns during training to determine how the features influence its predictions.
+- **Parameters $\theta$:** The weights and biases that the model learns during training to determine how the features influence its predictions.
 
 For a simple linear regression model with one feature, the hypothesis is
 
