@@ -33,7 +33,10 @@ $$
 To maximise $L(\theta)$, we can maximise $\log{L(\theta)}$ as it is a strictly increasing function. 
 
 $$
-l(\theta) = L(\theta) = n\log{\frac{1}{\sigma \sqrt{2\pi}}} - \sum_{i=1}^{n}{\frac{ (y^{(i)}-\theta^Tx^{(i)}) ^2}{2\sigma^2}}
+l(\theta) = \log L(\theta)
+= n \log\left(\frac{1}{\sigma\sqrt{2\pi}}\right)
+- \sum_{i=1}^{n}
+\frac{(y^{(i)}-\theta^T x^{(i)})^2}{2\sigma^2}
 $$
 To maximise $l(\theta)$ is the same as minimising $\sum_{i=1}^{n}{\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2\sigma^2}}$ which is $J(\theta}$. So we can say that least-squares regression is the same as doing maximum likelihood estimation. However, the assumptions made for MLE are not needed for LSE. To minimise $l(\theta)$, we take its derivative with respect to $\theta$ and equate it to 0.
 
