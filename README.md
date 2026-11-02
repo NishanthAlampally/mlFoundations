@@ -22,5 +22,6 @@ The goal is simple: **learn systematically, build consistently, and become a bet
 
 ## Log
 
-**Day 1** - Watched first two lectures of CS229; Implemented Linear Regression with Batch and Stochastic Gradient Descent.
-**Day 2** - Started watching lecture three of CS229; No notes made or code written; lecture was difficult to understand.
+- **Day 1** - Watched first two lectures of CS229; Implemented Linear Regression with Batch and Stochastic Gradient Descent.
+- **Day 2** - Started watching lecture three of CS229; No notes made or code written; lecture was difficult to understand.
+- **Day 3** - Watched StatQuest and then rewatched Probabilistic Interpretation and Locally Weighted Linear Regression
