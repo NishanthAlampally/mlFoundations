@@ -27,10 +27,10 @@ This means it is the likelihood of theta. In other words, it tells us how plausi
 For all training data points, it becomes
 
 $$
-L(\theta; X, \vec{y}) = \prod_{i=1}^{n}p(y^{(i)} | x^{(i)}; \theta)
+L(\theta; X, \vec{y}) = \prod_{i=1}^{n} p(y^{(i)} \mid x^{(i)}; \theta)
 $$
 
-To maximise $L(\theta)$, we can maximise $\log{L(\theta)}$ as it is a strictly increasing function. 
+To maximise $L(\theta)$, we can maximise $\log{L(\theta)}$ as it is a strictly increasing function.
 
 $$
 l(\theta) = \log L(\theta)
@@ -38,10 +38,14 @@ l(\theta) = \log L(\theta)
 - \sum_{i=1}^{n}
 \frac{(y^{(i)}-\theta^T x^{(i)})^2}{2\sigma^2}
 $$
-To maximise $l(\theta)$ is the same as minimising $\sum_{i=1}^{n}{\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2\sigma^2}}$ which is $J(\theta}$. So we can say that least-squares regression is the same as doing maximum likelihood estimation. However, the assumptions made for MLE are not needed for LSE. To minimise $l(\theta)$, we take its derivative with respect to $\theta$ and equate it to 0.
+
+To maximise $l(\theta)$ is the same as minimising $\sum_{i=1}^{n}{\frac{(y^{(i)}-\theta^T x^{(i)})^2}{2\sigma^2}}$ which is $J(\theta)$. So we can say that least-squares regression is the same as doing maximum likelihood estimation. However, the assumptions made for MLE are not needed for LSE. To minimise $l(\theta)$, we take its derivative with respect to $\theta$ and equate it to 0.
 
 $$
-\frac{\partial}{\partial \theta} l(\theta) = \sum_{i=1}^{n}{\frac{ x^{(i)}(y^{(i)}-\theta^Tx^{(i)})}{\sigma^2}} = 0
+\frac{\partial}{\partial \theta} l(\theta)
+= \sum_{i=1}^{n}
+\frac{x^{(i)}(y^{(i)}-\theta^T x^{(i)})}{\sigma^2}
+= 0
 $$
 
 This can be re-written as a closed form equation
