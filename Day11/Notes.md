@@ -10,9 +10,10 @@ $$
 For vector $\theta$, the notation is 
 
 $$
-\theta^{(t+1)} = \theta^{(t)} + H^{-1}\delta_\theta l
+\theta^{(t+1)} = \theta^{(t)} + H^{-1}\nabla_\theta l
 $$
-where $H$ is the Hessian matrix and $\delta_\theta l$ is the derivative of log-likelihood with respect to $\theta$.
+
+where $H$ is the Hessian matrix and $\nabla_\theta l$ is the derivative of log-likelihood with respect to $\theta$.
 
 ### Newton's Method for Logistic Regression
 
@@ -28,7 +29,9 @@ The first partial derivative with respect to parameter $\theta_k$ is:
 
 $$\frac{\partial \ell(\theta)}{\partial \theta_k} = \sum_{i=1}^m \left( y^{(i)} - h_\theta(x^{(i)}) \right) x_k^{(i)}$$
 
-Differentiating to Form the Hessian Entry $H_{jk}$By definition of the Hessian matrix:
+Differentiating to Form the Hessian Entry $H_{jk}$
+
+By definition of the Hessian matrix:
   
 $$H_{jk} = \frac{\partial^2 \ell(\theta)}{\partial \theta_j \partial \theta_k} = \frac{\partial}{\partial \theta_j} \left( \frac{\partial \ell(\theta)}{\partial \theta_k} \right)$$
 
@@ -40,7 +43,9 @@ Pass the derivative inside the summation:
 
 $$H_{jk} = \sum_{i=1}^m \frac{\partial}{\partial \theta_j} \left[ \left( y^{(i)} - h_\theta(x^{(i)}) \right) x_k^{(i)} \right]$$
 
-Evaluating the DerivativeBecause $x_k^{(i)}$ and $y^{(i)}$ are observed data, they are constants with respect to $\theta_j$:
+Evaluating the Derivative
+
+Because $x_k^{(i)}$ and $y^{(i)}$ are observed data, they are constants with respect to $\theta_j$:
 
 $$\frac{\partial x_k^{(i)}}{\partial \theta_j} = 0, \quad \frac{\partial y^{(i)}}{\partial \theta_j} = 0$$
 
@@ -52,8 +57,14 @@ Apply the chain rule to $h_\theta(x^{(i)}) = g(z^{(i)})$ where $g'(z) = g(z)(1 -
 
 $$\frac{\partial h_\theta(x^{(i)})}{\partial \theta_j} = \frac{d g(z^{(i)})}{d z^{(i)}} \cdot \frac{\partial z^{(i)}}{\partial \theta_j}$$
 
-Since $z^{(i)} = \sum_{r} \theta_r x_r^{(i)}$, we have $\frac{\partial z^{(i)}}{\partial \theta_j} = x_j^{(i)}$:$$\frac{\partial h_\theta(x^{(i)})}{\partial \theta_j} = h_\theta(x^{(i)})\left(1 - h_\theta(x^{(i)})\right) x_j^{(i)}$$
+Since $z^{(i)} = \sum_{r} \theta_r x_r^{(i)}$, we have $\frac{\partial z^{(i)}}{\partial \theta_j} = x_j^{(i)}$:
 
-Component-Wise ResultSubstitute the derivative of $h_\theta(x^{(i)})$ back into the expression:
+$$\frac{\partial h_\theta(x^{(i)})}{\partial \theta_j} = h_\theta(x^{(i)})\left(1 - h_\theta(x^{(i)})\right) x_j^{(i)}$$
+
+Component-Wise Result
+
+Substitute the derivative of $h_\theta(x^{(i)})$ back into the expression:
 
 $$H_{jk} = -\sum_{i=1}^m h_\theta(x^{(i)})\left(1 - h_\theta(x^{(i)})\right) x_j^{(i)} x_k^{(i)}$$
+
+_Note:_ I re-formatted this using AI, as maintaining notation with LaTeX was taking time. So I proved it in my notebook and then used AI to write it.
