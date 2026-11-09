@@ -28,3 +28,4 @@ The goal is simple: **learn systematically, build consistently, and become a bet
 - **Day 4** - Compared Batch Gradient Descent of log-likelihood with closed form; Watched Logistic Regression StatQuest and CS229 lecture.
 - **Day 5-9** - Vacation
 - **Day 10** - Coded Logistic Regression
+- **Day 11** - Watched lecture, proved mathematically and coded Newton's Method (for logistic regression)
