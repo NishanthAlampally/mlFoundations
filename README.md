@@ -26,3 +26,5 @@ The goal is simple: **learn systematically, build consistently, and become a bet
 - **Day 2** - Started watching lecture three of CS229; No notes made or code written; lecture was difficult to understand.
 - **Day 3** - Watched StatQuest and then rewatched Probabilistic Interpretation and Locally Weighted Linear Regression.
 - **Day 4** - Compared Batch Gradient Descent of log-likelihood with closed form; Watched Logistic Regression StatQuest and CS229 lecture.
+- **Day 5-9** - Vacation
+- **Day 10** - Coded Logistic Regression
